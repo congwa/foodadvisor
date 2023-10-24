@@ -123,7 +123,7 @@ const Restaurants = ({
                   } w-full p-4 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100 focus:outline-none`}
                   onClick={() => {
                     setPageNumber(pageNumber - 1);
-                    window.scrollTo(0, 200);
+                    window?.scrollTo(0, 200);
                   }}
                   disabled={pageNumber <= 1}
                 >
@@ -138,7 +138,7 @@ const Restaurants = ({
                   } w-full p-4 border-t border-b border-r text-base rounded-r-xl text-gray-600 bg-white hover:bg-gray-100 focus:outline-none`}
                   onClick={() => {
                     setPageNumber(pageNumber + 1);
-                    window.scrollTo(0, 200);
+                    window?.scrollTo(0, 200);
                   }}
                   disabled={pageNumber >= lastPage}
                 >

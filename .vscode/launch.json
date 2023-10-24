@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+     {
+      "name": "Launch Program",
+      "cwd":"${workspaceFolder}/client",
+      "program": "${workspaceFolder}/client/node_modules/next/dist/bin/next",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+     }
+  ]
+}

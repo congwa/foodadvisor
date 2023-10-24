@@ -32,7 +32,6 @@ const Universals = ({ global, pageData, preview }) => {
 // This gets called on every request
 export async function getServerSideProps(context) {
   const { slug, locale } = getLocalizedParams(context.query);
-
   try {
     const data = getData(
       slug,
@@ -41,9 +40,12 @@ export async function getServerSideProps(context) {
       'collectionType',
       context.preview
     );
+
+    console.log(data)
     const res = await fetch(delve(data, 'data'));
     const json = await res.json();
 
+    console.log(json)
     if (!json.data.length) {
       return handleRedirection(context.preview, null);
     }

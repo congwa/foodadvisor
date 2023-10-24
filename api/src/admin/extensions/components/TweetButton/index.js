@@ -22,7 +22,7 @@ const TweetButton = () => {
       process.env.STRAPI_ADMIN_CLIENT_URL
     }/${base}/${modifiedData.slug}`;
 
-    window.open(tweetUrl, "_blank").focus();
+    window?.open(tweetUrl, "_blank").focus();
   };
 
   const content = {
