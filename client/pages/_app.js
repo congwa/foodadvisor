@@ -36,6 +36,9 @@ MyApp.getInitialProps = async (appContext) => {
     const globalData = await res.json();
     const globalDataAttributes = globalData.data.attributes;
 
+    console.log('globalData', globalData)
+    console.log('globalDataAttributes', globalDataAttributes)
+    console.log('appProps', appProps)
     return { ...appProps, pageProps: { global: globalDataAttributes } };
   } catch (error) {
     return { ...appProps };

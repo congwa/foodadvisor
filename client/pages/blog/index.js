@@ -155,6 +155,8 @@ export async function getServerSideProps(context) {
       )
     );
     const articles = await resArticles.json();
+    console.log('articles', articles);
+
 
     const resCategories = await fetch(
       getStrapiURL(`/categories?pagination[limit]=99`)

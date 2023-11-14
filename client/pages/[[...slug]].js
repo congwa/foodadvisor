@@ -13,7 +13,7 @@ const Universals = ({ global, pageData, preview }) => {
   if (pageData === null) {
     return <ErrorPage statusCode={404} />;
   }
-
+  console.log('pageData', pageData)
   const blocks = delve(pageData, 'attributes.blocks');
   return (
     <Layout global={global} pageData={pageData} type="pages" preview={preview}>
@@ -32,6 +32,8 @@ const Universals = ({ global, pageData, preview }) => {
 // This gets called on every request
 export async function getServerSideProps(context) {
   const { slug, locale } = getLocalizedParams(context.query);
+  console.log('context-: ', context)
+  console.log('slug-', slug, locale)
   try {
     const data = getData(
       slug,
@@ -41,7 +43,7 @@ export async function getServerSideProps(context) {
       context.preview
     );
 
-    console.log(data)
+    console.log('page页面即将请求的接口地址-: ', delve(data, 'data'))
     const res = await fetch(delve(data, 'data'));
     const json = await res.json();
 

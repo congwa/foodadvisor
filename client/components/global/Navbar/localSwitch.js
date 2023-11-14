@@ -29,7 +29,9 @@ const localeSwitch = ({ pageData, type }) => {
       }
 
       setShowing(false);
+      console.log(pageData)
       const localizations = await listLocalizedPaths(pageData, type);
+      console.log('localizations', localizations)
       setLocalizedPaths(localizations);
     };
 

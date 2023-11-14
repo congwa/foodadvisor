@@ -140,7 +140,7 @@ const BlockManager = ({ blocks, contentType, pageData, type }) => {
                 <div className="hidden group-hover:block">
                   {contentType} {'>'} {pageData?.id} {'>'} {block.__component}
                 </div>
-                {window?.__NEXT_PUBLIC_API_URL && (
+                {typeof window !== 'undefined' && window?.__NEXT_PUBLIC_API_URL && (
                   <Link
                     href={`${
                       window?.__NEXT_PUBLIC_API_URL || 'http://localhost:1337'

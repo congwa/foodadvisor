@@ -22,7 +22,6 @@
     "@webbio/strapi-plugin-scheduler": "^0.1.2",
     "better-sqlite3": "^7.6.2",
     "fs-extra": "^10.0.0",
-    "strapi-plugin-entity-relationship-chart": "^4.1.0",
     "strapi-plugin-populate-deep": "^1.1.2",
     "strapi-plugin-todo": "^0.0.9",
     "unzip-stream": "^0.3.1",

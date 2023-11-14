@@ -183,6 +183,8 @@ export async function getServerSideProps(context) {
     );
     const restaurants = await resRestaurants.json();
 
+    console.log('restaurants', restaurants);
+
     const resCategories = await fetch(
       getStrapiURL(`/categories?pagination[limit]=99`)
     );
